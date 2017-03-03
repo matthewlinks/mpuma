@@ -65,7 +65,7 @@ sub dump_fq_compressed{
         	if ($header =~ /^\@(.*)$/){
         	        $header = '>' . $1;
         	}else{
-        	        die "Error bad header [$header]";
+        	        die "Error bad header [$header] in '$file'";
         	}
         	print STDOUT $header,"\n";
         

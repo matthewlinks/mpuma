@@ -40,7 +40,8 @@ $blastall			= '/usr/local/blast/bin/blastall';
 $mothur				= '/usr/local/bin/mothur';
 $tCoffee			= 't_coffee';
 $fastTree			= "FastTreeMP";			# http://meta.microbesonline.org/fasttree/ install the multi-threaded version
-$classifier			= "$ENV{mPUMA}/classifier/rdp_classifier_2.2/rdp_classifier-2.2.jar";
+#$classifier			= "$ENV{mPUMA}/classifier/rdp_classifier_2.2/rdp_classifier-2.2.jar";
+$classifier			= '/usr/local/rdp_classifier_2.8/dist/classifier.jar';
 $bowtie2			= '/usr/local/bowtie2/bowtie2';
 $bowtie2_build			= '/usr/local/bowtie2/bowtie2-build';
 
@@ -60,7 +61,7 @@ $primer_file    = "$ENV{mPUMA}/reference_fasta/primers-enumerated-3primeN.msf";
 #$primer_file	= "$ENV{mPUMA}/reference_fasta/rpoB-primers.fna.enumerated";
 $cpnDB_nr_nuc   = "$ENV{mPUMA}/reference_fasta/cpndb_nr_20140327";
 $cpnDB_nr_pep   = "$ENV{mPUMA}/reference_fasta/cpndb_nr_pep_20140327";
-$VERBOSE	= 0;
+$VERBOSE	= 1;
 
 # These are internal programs within mPUMA and you should not need to edit these unless you are a developer
 $translateStranded		= "$ENV{mPUMA}/bin/translate_stranded.pl";
@@ -1794,9 +1795,9 @@ sub run_classifier_on_fasta {
 		return $output;
 	}else{
 		# cpn60
-		my $javaClassifierCommand = "java -Xmx1024m -jar $classifier -t $ENV{mPUMA}/classifier/rRNAClassifier.properties";
+#		my $javaClassifierCommand = "java -Xmx1024m -jar $classifier -t $ENV{mPUMA}/classifier/rRNAClassifier.properties";
 		# 16S rRNA
-#		my $javaClassifierCommand = "java -Xmx1024m -jar $classifier";
+		my $javaClassifierCommand = "java -Xmx1024m -jar $classifier";
 		system("$ENV{mPUMA}/bin/fasta_batcher.pl",
 			'-i',	$input,
 			'-ni',	'-q',

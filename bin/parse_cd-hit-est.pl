@@ -75,7 +75,7 @@ sub parseCDhitESTClust {
 			$representative = $3;
 			die "Error multiple lengths reported for $representative" if defined $lengths{$representative};
 			$lengths{$representative} = $1;
-		}elsif($_ =~ /\d+\s+(\d+)(nt|aa),\s\>(\w+)\.\.\.\sat/){
+		}elsif($_ =~ /\d+\s+(\d+)(nt|aa),\s\>([\w\_\-\.]+)\.\.\.\sat/){
 			die "Error multiple lengths reported for $3" if defined $lengths{$3};
 			$lengths{$3} = $1;
 			push(@members,$3);
