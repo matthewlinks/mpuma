@@ -1,0 +1,24 @@
+#
+# This matrix was created by Matthew Links and Luke McCarthy 7/18/13
+# goal is to try and use this in conjunction with needle / water 
+# to find primers which are FASTA formatted with IUPAC ambiguity codes
+#
+# Uses ambiguous nucleotide codes +1 for match 0 for mismatch
+# 
+    A   T   G   C   S   W   R   Y   K   M   B   V   H   D   N   U
+A   1   0   0   0   0   1   1   0   0   1   0   0   0   0   1   0
+T   0   1   0   0   0   1   0   1   1   0   0   0   0   0   1   1
+G   0   0   1   0   1   0   1   0   1   0   0   0   0   0   1   0
+C   0   0   0   1   1   0   0   1   0   1   0   0   0   0   1   0
+S   0   0   1   1   1   0   0   0   0   0   0   0   0   0   1   0
+W   1   1   0   0   0   1   0   0   0   0   0   0   0   0   1   1
+R   1   0   1   0   0   0   1   0   0   0   0   0   0   0   1   0
+Y   0   1   0   1   0   0   0   1   0   0   0   0   0   0   1   1
+K   0   1   1   0   0   0   0   0   1   0   0   0   0   0   1   1
+M   1   0   0   1   0   0   0   0   0   1   0   0   0   0   1   0
+B   0   0   0   0   0   0   0   0   0   0   1   0   0   0   1   0
+V   0   0   0   0   0   0   0   0   0   0   0   1   0   0   1   0
+H   0   0   0   0   0   0   0   0   0   0   0   0   1   0   1   0
+D   0   0   0   0   0   0   0   0   0   0   0   0   0   1   1   0
+N   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1
+U   0   1   0   0   0   1   0   1   1   0   0   0   0   0   1   1

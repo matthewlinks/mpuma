@@ -1,0 +1,10 @@
+
+========================[ Jun 28, 2011 11:50 AM ]========================
+Version 2.2.16 [Mar-25-2007]
+Started database file "/Volatile/aped-live/blast_dbs/cpnDB_type_strains_pep_28June2011"
+NOTE: CoreLib [002.003] FileOpen(".formatdbrc","r") failed
+NOTE: CoreLib [002.003] FileOpen("/home/AAFC-AAC/linksm/.formatdbrc","r") failed
+NOTE: [000.000] No number of link bits used found in config  file. Ignoring
+NOTE: [000.000] No number of membership bits used found in config file. Ignoring
+Formatted 771 sequences in volume 0
+SUCCESS: formatted database /Volatile/aped-live/blast_dbs/cpnDB_type_strains_pep_28June2011

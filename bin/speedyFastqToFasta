@@ -1,0 +1,30 @@
+#!/usr/bin/perl -w
+use Getopt::Long;
+my ($inFile,$outFile);
+my @options = (
+	'i=s',	\$inFile,
+	'o=s',	\$outFile
+);
+&GetOptions(@options);
+
+open(STDOUT,">$outFile") if defined $outFile;
+open(STDIN,"<$inFile") if defined $inFile;
+
+while(my $header = <STDIN>){
+	chomp $header;
+	my $seq = <STDIN>;
+	chomp $seq;
+	my $plus = <STDIN>;
+	my $qual = <STDIN>;
+	if ($header =~ /^\@(.*)$/){
+		$header = '>' . $1;
+	}else{
+		die "Error bad header [$header]";
+	}
+	print STDOUT $header,"\n";
+	print STDOUT $seq,"\n";
+}
+close STDIN;
+close STDOUT;
+
+exit 0;
